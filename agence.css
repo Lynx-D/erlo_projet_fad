@@ -1,0 +1,259 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.agenceBody{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#topBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 10%;
+}
+
+#topBox p{
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.greenSpan{
+    color: #39CF76;
+}
+
+#topBox h1{
+    margin-top: 20px;
+    font-weight: ;
+    font-size: 5em;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.1em;
+}
+
+#presentation{
+    padding: 10%;
+
+}
+
+#photoTeam{
+    padding: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+#photoTeam img{
+    border-radius: 8px;}
+
+#descriptionTeam{
+    text-decoration: none;
+    text-decoration-color: white;
+    font-size: 0.7em;
+
+}
+
+#ctaExpertises{
+    text-align: center;
+      
+}
+
+#ctaExpertises button{
+    padding: 5px 20px;
+    border: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: #39CF76;
+    color: white;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 0.3s ease;
+      }
+
+      #ctaExpertises button:hover{
+    transform: scale(0.9);
+}
+
+
+      #partners{
+        color: black;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        font-weight: 900;
+        text-align: center;
+        padding: 10%;
+        background-color: #F1F1F1;
+    }
+
+.logosPartners {
+    padding: 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
+    grid-column-gap: 5%;
+    grid-row-gap: 10%;
+    }
+
+.logosPartners div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logosPartners div img{
+    width: 100%;
+}
+
+#vousSouhaitez{
+    color: white;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10%;
+    background-color: #1B9C50;
+}
+
+
+#vousSouhaitez p{
+    font-size: 1.3em;
+      }
+
+#vousSouhaitez button{
+    padding: 5px 20px;
+    border: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: white;
+    color: black;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 0.3s ease;
+      }
+
+#vousSouhaitez button:hover{
+    transform: scale(0.9);
+}
+
+button{
+    margin-top: 20px;
+}
+
+@media (min-width:800px) {
+    .logosPartners {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-column-gap: 5%;
+        grid-row-gap: 10%;
+        
+        }
+    
+}
+
+
+/* .card {
+    border-radius: 10px;
+    width: 170px;
+    height: 200px;
+    background: #f5f5f5;
+    padding: 2rem 1.5rem;
+    transition: box-shadow .3s ease, transform .2s ease;
+   }
+   
+   .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s ease, opacity .2s ease;
+   }
+   
+
+   .card-avatarErwann {
+    --size: 60px;
+    background: url(https://picsum.photos/id/602/100);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    transition: transform .2s ease;
+  
+   }
+
+   .card-avatarLoris {
+    --size: 60px;
+    background: url(https://picsum.photos/id/447/100);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    transition: transform .2s ease;
+   }
+
+   .card-social {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    opacity: 0;
+    transition: transform .2s ease, opacity .2s ease;
+   }
+   
+   .card-social__item {
+    list-style: none;
+   }
+   
+   .card-social__item svg {
+    display: block;
+    height: 18px;
+    width: 18px;
+    fill: #515F65;
+    cursor: pointer;
+    transition: fill 0.2s ease ,transform 0.2s ease;
+   }
+   
+   .card-title {
+    color: #333;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 2rem;
+   }
+   
+   .card-subtitle {
+    color: #859ba8;
+    font-size: 0.8em;
+   }
+   
+   .card:hover {
+    box-shadow: 0 8px 50px #23232333;
+   }
+   
+   .card:hover .card-info {
+    transform: translateY(-5%);
+   }
+   
+   .card:hover .card-social {
+    transform: translateY(100%);
+    opacity: 1;
+   }
+   
+   .card-social__item svg:hover {
+    fill: #39CF76;
+    transform: scale(1.1);
+   }
+   
+   .card-avatar:hover {
+    transform: scale(1.1);
+   } */
