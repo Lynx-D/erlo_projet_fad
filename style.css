@@ -3,7 +3,6 @@
 html, body {
     margin: 0; 
     height: 100%; 
-    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -51,6 +50,23 @@ html, body {
     padding: 0;
 }
 
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    background: rgba(255, 255, 255, 0);
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(212, 212, 212);
+    border-radius: 10px;
+}
+
 /* Header & Navigation */
 
 header {
@@ -61,7 +77,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 10;
     margin: 0;
 }
 
@@ -171,8 +187,6 @@ header {
 
 .navbar .menu-items li {
     margin-bottom: .5rem;
-    font-size: 1.5rem;
-    font-weight: 800;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -200,13 +214,25 @@ header {
 
 #mainPresentation {
     background-color: #39CF76;
-    display: block;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#mainPresentation div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+#mainPresentation div:nth-child(2) {
+    display: none;
 }
 
 #mainPresentation h2 {
@@ -250,17 +276,28 @@ header {
     margin-bottom: 13vw;
 }
 
-#mainAgence p {
+#mainAgence img {
+    display: none;
+}
+
+#mainAgence > div p, #mainAgence > div > div p {
     margin: 10vw;
 }
 
-#mainAgence p:nth-child(2) {
+#mainAgence > div p {
     font-weight: 500;
     font-size: 6vw;
     color: #000000;
 }
 
-#mainAgence p:nth-child(3) {
+#mainAgence  > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainAgence  > div > div p {
     font-weight: 400;
     font-size: 4vw;
     color: #000000;
@@ -345,6 +382,14 @@ header {
     padding-bottom: 7vw;
 }
 
+#mainProjets div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
 #mainProjets p {
     font-weight: 400;
     font-size: 4vw;
@@ -354,11 +399,8 @@ header {
     margin: 10vw;
 }
 
-#mainProjets div {
-    background: url(./assets/pics/VideoCapture_20221012-124338.jpg) no-repeat center;
-    background-size: cover;
-    width: 100%;
-    height: 60vw;
+#mainProjets img {
+    width: 80%;
     margin-bottom: 9vw;
 }
 
@@ -377,6 +419,13 @@ header {
     margin-bottom: 0;
     padding-top: 0vw;
     padding-bottom: 10vw;
+}
+
+.footerContact div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footerContact p {
@@ -435,4 +484,353 @@ footer p {
     font-weight: 400;
     margin: 10vw;
     margin-top: 5vw;
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+---------------------------------------------DESKTOP------------------------------------------------
+----------------------------------------------------------------------------------------------------
+*/
+
+@media (min-width: 1024px) {
+
+    .title-darker, .title-light {
+        font-weight: 800;
+        font-size: 4.5vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .button {
+        background: #74EAA4;
+        color: #FFFFFF;
+        border: none;
+        width: 15vw;
+        height: 3vw;
+        font-size: 1vw;
+    }
+
+    .imgPlaceholderDiv {
+        width: 6vw;
+        height: 6vw;
+    }
+    
+    /* Header & Navigation */
+
+    header {
+        position: fixed;
+        background: #FFFFFF;
+    }
+
+    .navbar {
+        position: relative;
+        width: fit-content;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-right: 20px;
+    }
+    
+    .nav-container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navbar .nav-container li {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navbar .nav-container a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: 500;
+        font-size: 1.1rem;
+        padding: 0.7rem;
+    }
+    
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .nav-container .checkbox, .nav-container .hamburger-lines, .nav-container .hamburger-lines .line  {
+        display: none;
+    }
+    
+    .navbar .menu-items {
+        background: none;
+        padding: 0;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        transform: translateY(0%);
+        opacity: 1;
+        transition: none;
+    }
+    
+    .navbar .menu-items li {
+        margin-bottom: 0;
+    }
+
+    /* Main presentation */
+
+    #mainPresentation {
+        flex-direction: row;
+    }
+
+    #mainPresentation div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #mainPresentation div:nth-child(2) {
+        display: block;
+    }
+
+    #mainPresentation div img {
+        height: 100%;
+        opacity: 50%;
+        mix-blend-mode:multiply;
+    }
+
+    #mainPresentation h2 {
+        font-weight: 800;
+        font-size: 5vw;
+        color: #1B9C50;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #mainPresentation p:nth-child(2) {
+        font-weight: 800;
+        font-size: 2.6vw;
+        margin: 0;
+        padding: 0;
+        color: #FFFFFF;
+    }
+    
+    #mainPresentation p:nth-child(3) {
+        font-weight: 500;
+        font-size: 1.25vw;
+        margin: 2vw 5vw;
+        padding: 0;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    /* Main agence */
+
+    #mainAgence {
+        margin-top: 5vw;
+    }
+
+    #mainAgence img {
+        display: block;
+        margin-top: 5vw;
+        width: 75vw;
+    }
+    
+    #mainAgence > div {
+        display: flex;
+        margin-top: 4vw;
+    }
+
+    #mainAgence > div p {
+        font-size: 1.8vw;
+        font-weight: 600;
+        margin: 0;
+        margin-left: 13vw;
+    }
+
+    #mainAgence > div > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-right: 13vw;
+        margin-left: 3vw;
+    }
+
+    #mainAgence > div > div p {
+        text-align: justify;
+        margin: 0;
+        margin-bottom: 2vw;
+        font-size: 1.2vw;
+        font-weight: 500;
+    }
+
+    #mainAgence > div > div a span {
+        display: none;
+    }
+
+    #mainAgence > div > div a::after {
+        content: "Découvrir l'agence";
+    }
+
+    /* mainExpertise */
+
+    #mainExpertise p {
+        font-weight: 400;
+        font-size: 1vw;
+        color: #000000;
+        margin-top: 0vw;
+        text-align: center;
+        margin: 2vw 30vw;
+    }
+
+    #mainExpertise > div {
+        display: flex;
+        flex-direction: row;
+        margin: 0 10vw;
+    }
+    
+    .mainExpertiseBox {
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.5vw;
+        margin: 1vw 1.5vw;
+        padding: 1.5vw 1vw;
+    }
+    
+    .mainExpertiseBox div {
+        margin-top: 1vw;
+        margin-bottom: 0vw;
+    }
+    
+    .mainExpertiseBox h3 {
+        color: #000000;
+        margin: 1.5vw;
+        padding: 0;
+        font-size: 1.1vw;
+    }
+    
+    .mainExpertiseBox p {
+        color: #000000;
+        margin: 0 2vw !important;
+        margin-bottom: 1vw !important;
+        padding: 0 !important;
+        font-size: .7vw !important; 
+    }
+
+    /* Main projets */
+
+    #mainProjets {
+        padding-top: .5vw;
+        padding-bottom: 1vw;
+    }
+
+    #mainProjets p {
+        margin: 0;
+        font-size: 1.8vw;
+        text-align: left;
+    }
+
+    #mainProjets div {
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 5vw 5vw;
+    }
+
+    #mainProjets img {
+        width: 35vw;
+        margin: 0;
+        margin-left: 5vw;
+    }
+
+    /* Footer contact */
+
+    .footerContact {
+        background-color: #1B9C50;
+        display: block;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 3vw;
+        margin-bottom: 0;
+        padding: 2vw 0;
+    }
+
+    .footerContact div {
+        display: flex;
+        flex-direction: row;
+        margin: 0 20vw;
+    }
+
+    .footerContact p {
+        line-height: 1.5vw;
+        color: #FFFFFF;
+        font-size: 1vw;
+        font-weight: 500;
+        text-align: left;
+        margin: 0;
+    }
+
+    .footerContactBtn {
+        width: 20vw;
+        height: 3vw;
+        font-size: 1vw;
+        margin: 0;
+        margin-left: 3vw;
+    }
+
+    .footerContactBtn span {
+        display: none;
+    }
+
+    .footerContactBtn::after {
+        content: "Nous contacter";
+    }
+
+    footer {
+        background-color: #000000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 2vw 0;
+    }
+    
+    .footerSocial {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .footerSocial i {
+        font-size: 1.1vw;
+        margin: 0 .5vw;
+        color: rgb(255, 255, 255);
+    }
+    
+    footer p {
+        color: #FFFFFF;
+        text-align: center;
+        font-size: .8vw;
+        font-weight: 300;
+        margin: 0;
+        margin-top: 1.5vw;
+    }
 }
