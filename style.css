@@ -498,6 +498,7 @@
   text-decoration: none;
 }
 
+
 #sectionForm .box{
 	text-align: center;
 	margin: 5% 0 0 0;
@@ -596,7 +597,8 @@
 }
 
 .contact-wrap {
-    padding: 15px;
+    height: 100%;
+    padding: 40px;
     background: #ecf0f1;
 }
 .contact-wrap h1 {
