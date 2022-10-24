@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
 /* Main presentation */
 
 #mainPresentation {
@@ -135,9 +140,10 @@
     padding: 0 2vw;
 }
 
-.mainExpertiseBox div {
+.mainExpertiseBox img {
     margin-top: 6vw;
     margin-bottom: 0vw;
+    height: 20vw;
 }
 
 .mainExpertiseBox h3 {
@@ -194,6 +200,110 @@
     margin-bottom: 9vw;
 }
 
+/* Expertises */
+
+#expertisePresentation {
+    background-color: #FFFFFF;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#expertisePresentation div {
+    margin: 0 8vw;
+}
+
+#expertisePresentation h2 {
+    text-align: left;
+    line-height: 10vw;
+    margin-top: 27vw;
+}
+
+#expertisePresentation p {
+    font-weight: 500;
+    font-size: 5.25vw;
+    color: #000000;
+    margin-top: 0vw;
+    text-align: left;
+    margin: 10vw 0;
+}
+
+.expertisesBlock {
+    background-color: #F5F5F5;
+    display: block;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8vw 0;
+    margin: 0;
+}
+
+.expertisesBlock img {
+    height: 25vw;
+    margin: 0 10vw;
+}
+
+.expertisesBlock div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.expertisesBlock:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+.expertisesBlock h3 {
+    color: #000000;
+    margin: 3vw;
+    padding: 0;
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+.expertisesBlock p {
+    color: #000000;
+    margin: 1vw 7vw;
+    padding: 0;
+    font-size: 4vw;
+}
+
+/* Projets */
+
+#projetsBlock {
+    height: 56vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#projetsBlock h3 {
+    color: #000000;
+    margin: 3vw;
+    padding: 0;
+    font-size: 10vw;
+    font-weight: 800;
+}
+
+#projetsBlock p {
+    color: #000000;
+    margin: 1vw 7vw;
+    padding: 0;
+    font-size: 4vw;
+    font-weight: 600;
+    text-align: center;
+}
+
 /*
 ----------------------------------------------------------------------------------------------------
 ---------------------------------------------DESKTOP------------------------------------------------
@@ -201,96 +311,6 @@
 */
 
 @media (min-width: 1024px) {
-
-    .title-darker, .title-light {
-        font-weight: 800;
-        font-size: 4.5vw;
-        margin: 0;
-        padding: 0;
-    }
-
-    .button {
-        background: #74EAA4;
-        color: #FFFFFF;
-        border: none;
-        width: 15vw;
-        height: 3vw;
-        font-size: 1vw;
-    }
-
-    .imgPlaceholderDiv {
-        width: 6vw;
-        height: 6vw;
-    }
-    
-    /* Header & Navigation */
-
-    header {
-        position: fixed;
-        background: #FFFFFF;
-    }
-
-    .navbar {
-        position: relative;
-        width: fit-content;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        margin-right: 20px;
-    }
-    
-    .nav-container {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .navbar .nav-container li {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .navbar .nav-container a {
-        text-decoration: none;
-        color: #000000;
-        font-weight: 500;
-        font-size: 1.1rem;
-        padding: 0.7rem;
-    }
-    
-    .nav-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    
-    .nav-container .checkbox, .nav-container .hamburger-lines, .nav-container .hamburger-lines .line  {
-        display: none;
-    }
-    
-    .navbar .menu-items {
-        background: none;
-        padding: 0;
-        height: fit-content;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        text-align: center;
-        transform: translateY(0%);
-        opacity: 1;
-        transition: none;
-    }
-    
-    .navbar .menu-items li {
-        margin-bottom: 0;
-    }
 
     /* Main presentation */
 
@@ -420,9 +440,10 @@
         padding: 1.5vw 1vw;
     }
     
-    .mainExpertiseBox div {
+    .mainExpertiseBox img {
         margin-top: 1vw;
         margin-bottom: 0vw;
+        height: 6vw;
     }
     
     .mainExpertiseBox h3 {
@@ -465,82 +486,115 @@
         margin-left: 5vw;
     }
 
-    /* Footer contact */
+    /* Expertises */
 
-    .footerContact {
-        background-color: #1B9C50;
+    #expertisePresentation {
+        background-color: #FFFFFF;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    #expertisePresentation div {
+        margin: 0 8vw;
+    }
+
+    #expertisePresentation h2 {
+        text-align: center;
+        line-height: 5vw;
+        margin-top: 8vw;
+    }
+
+    #expertisePresentation p {
+        font-weight: 400;
+        font-size: 1.25vw;
+        color: #000000;
+        margin-top: 0vw;
+        text-align: center;
+        margin: 3vw 15vw;
+    }
+
+    #expertiseWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .expertisesBlock {
+        background-color: #F5F5F5;
         display: block;
         height: fit-content;
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: flex-start;
-        margin-top: 3vw;
-        margin-bottom: 0;
-        padding: 2vw 0;
+        padding: 2.5vw 0;
     }
 
-    .footerContact div {
+    .expertisesBlock:nth-child(odd) {
+        background-color: #FFFFFF;
+    }
+
+    .expertisesBlock img {
+        height: 10vw;
+        margin: 0 10vw;
+    }
+
+    .expertisesBlock div {
         display: flex;
-        flex-direction: row;
-        margin: 0 20vw;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
     }
 
-    .footerContact p {
-        line-height: 1.5vw;
-        color: #FFFFFF;
-        font-size: 1vw;
-        font-weight: 500;
+    .expertisesBlock h3 {
+        color: #000000;
+        padding: 0;
+        margin: 0;
+        margin-left: 5vw;
+        font-size: 1.5vw;
+        font-weight: 600;
+    }
+
+    .expertisesBlock p {
         text-align: left;
+        color: #000000;
         margin: 0;
+        margin-left: 5vw;
+        padding: 0;
+        font-size: 0.9vw;
     }
 
-    .footerContactBtn {
-        width: 20vw;
-        height: 3vw;
-        font-size: 1vw;
-        margin: 0;
-        margin-left: 3vw;
-    }
-
-    .footerContactBtn span {
-        display: none;
-    }
-
-    .footerContactBtn::after {
-        content: "Nous contacter";
-    }
-
-    /* Footer */
-
-    footer {
-        background-color: #000000;
+    /* Projets */
+    
+    #projetsBlock {
+        height: 86vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    
+    #projetsBlock h3 {
+        color: #000000;
         margin: 0;
-        padding: 2vw 0;
+        padding: 0;
+        font-size: 5vw;
+        font-weight: 800;
     }
     
-    .footerSocial {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .footerSocial i {
-        font-size: 1.1vw;
-        margin: 0 .5vw;
-        color: rgb(255, 255, 255);
-    }
-    
-    footer p {
-        color: #FFFFFF;
+    #projetsBlock p {
+        color: #000000;
+        margin: 1vw 7vw;
+        padding: 0;
+        font-size: 2vw;
+        font-weight: 600;
+        line-height: 2.5vw;
         text-align: center;
-        font-size: .8vw;
-        font-weight: 300;
-        margin: 0;
-        margin-top: 1.5vw;
     }
 }

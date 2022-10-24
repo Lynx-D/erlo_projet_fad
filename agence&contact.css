@@ -463,18 +463,20 @@ button{
 }
 
 @media (min-width: 768px) {
-    .contact-wrap {
-      margin: auto;
-    }
+  .contact-wrap {
+    margin: auto;
   }
-  @media (max-width: 868px) {
-      .contact-form {
-        width: 100%;
-        padding: 40px;
-      }
+}
+  
+@media (max-width: 868px) {
+  .contact-form {
+    width: 100%;
+    padding: 40px;
   }
-  @media (max-width: 568px) {
-      .contact-form {
-        padding: 10px;
-      }
-
+}
+  
+@media (max-width: 568px) {
+  .contact-form {
+    padding: 10px;
+  }
+}
