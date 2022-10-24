@@ -361,7 +361,7 @@
     position: relative;
     width: 160px;
     height: 200px;
-    margin: 35px 0;
+    margin: 40px;
 }
   
 .card {
@@ -370,7 +370,7 @@
     width: 160px;
     height: 200px;
     background: white;
-    padding: 16px;
+    padding: 10px;
     border: 1px solid black;
     transition: all .5s ease-in-out;
 }
@@ -389,7 +389,7 @@
     display: flex;
     transform: translateY(200%);
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 15px;
     gap: .5rem;
     transition: transform .5s ease-in, opacity .3s ease-in;
     opacity: 0;
@@ -425,7 +425,7 @@
   
 .title {
     position: absolute;
-    bottom: 1rem;
+    bottom: 0;
     transition: transform .25s ease-out;
 }
   
@@ -457,7 +457,7 @@
     font-weight: 900;
     text-align: center;
     padding: 10%;
-    background-color: #F1F1F1;
+    background: linear-gradient(#F1F1F1, white);
 }
 
 .logosPartners {
