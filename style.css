@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-}
-
 /* Main presentation */
 
 #mainPresentation {
@@ -302,6 +297,458 @@
     font-size: 4vw;
     font-weight: 600;
     text-align: center;
+}
+
+/* Page Agence */
+
+.topBoxContact {
+  background-color: #1B9C50 !important; 
+}
+
+.topBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 10%;
+}
+
+.topBox p{
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.greenSpan{
+    color: #39CF76;
+}
+
+.whiteSpan{
+    color: white;
+}
+
+.topBox h1{
+    margin-top: 20px;
+    font-size: 5em;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.1em;
+}
+
+.mainImgContainer{
+    width: 100%;
+}
+
+.mainImgContainer img{
+    width: 100%;
+}
+
+#presentation{
+    padding: 10%;
+}
+
+#photoTeam{
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    width: 160px;
+    height: 200px;
+    margin: 35px 0;
+}
+  
+.card {
+    color: white;
+    position: relative;
+    width: 160px;
+    height: 200px;
+    background: white;
+    padding: 16px;
+    border: 1px solid black;
+    transition: all .5s ease-in-out;
+}
+
+.card1{
+    background-image: url("https://pbs.twimg.com/media/E9u3vfHXIAMmqf8?format=png&name=360x360");
+    background-position:50% 5%;  
+}
+
+.card2{
+    background-image: url("https://www.nautiljon.com/images/jeuxvideo_persos/00/82/naked_snake_1628.jpg");
+    background-position:50%;
+}
+  
+.card-hidden {
+    display: flex;
+    transform: translateY(200%);
+    flex-direction: column;
+    margin-top: 30px;
+    gap: .5rem;
+    transition: transform .5s ease-in, opacity .3s ease-in;
+    opacity: 0;
+    
+}
+  
+.card-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 1px dashed black;
+    border-radius: 8px;
+    z-index: -1;
+}
+  
+.card:hover {
+    color: black;
+    transform: translate(-15px, -15px);
+    border-color: #39CF76;
+    background-image: none;
+}
+  
+.card:hover .card-hidden {
+    transform: translateY(0);
+    opacity: 1;
+}
+  
+.card:hover .title {
+    transform: translateY(200%);
+}
+  
+.title {
+    position: absolute;
+    bottom: 1rem;
+    transition: transform .25s ease-out;
+}
+  
+#ctaExpertises{
+    text-align: center;
+}
+
+#ctaExpertises a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+#ctaContact{
+    text-align: center;
+}
+
+#ctaContact a{
+    text-align: center;
+    text-decoration: none;
+    color: white;  
+}
+
+
+#partners{
+    color: black;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    padding: 10%;
+    background-color: #F1F1F1;
+}
+
+.logosPartners {
+    padding: 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
+    grid-column-gap: 10%;
+    grid-row-gap: 20%;
+}
+
+.logosPartners div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logosPartners div img{
+    width: 100%;
+}
+
+
+.box{
+	font-size: 1.2em;
+	line-height: 1.6em;
+    text-align: center;
+}
+
+/* Page contact / Formulaire */
+
+#sectionForm h2{
+	margin-bottom: 50px;
+  position: relative;
+  display: block;
+}
+#sectionForm p a{
+	color: #39CF76;
+  text-decoration: none;
+}
+
+#sectionForm .box{
+	text-align: center;
+	margin: 5% 0 0 0;
+	width: 100%;
+}
+
+.contact-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+}
+.contact-form .input-block {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #39CF76;
+    margin: 0;
+    position: relative;
+    margin-bottom: 20px;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.contact-form .input-block.textarea {
+    height: auto;
+}
+.contact-form .input-block.textarea .form-control {
+    height: auto;
+    resize: none;
+}
+.contact-form .input-block label {
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    display: block;
+    margin: 0;
+    font-weight: 400;
+    z-index: 1;
+    color: #aaa;
+    font-size: 18px;
+    line-height: 10px;
+}
+.contact-form .input-block .form-control {
+    background-color: transparent;
+    margin: 0;
+    outline: none;
+    border: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: auto;
+    padding: 30px 10px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    font-size: 18px;
+    color: #333;
+}
+.contact-form .input-block .form-control:focus label {
+    top: 0;
+}
+.contact-form .square-button {
+    font-family: "poppins";
+    background-color: #39CF76;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2em;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 0 60px;
+    height: 60px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.contact-form .square-button:hover, .contact-form .square-button:focus {
+    background-color: #39CF76;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+}
+
+.contact-wrap {
+    padding: 15px;
+    background: #ecf0f1;
+}
+.contact-wrap h1 {
+    background-color: white;
+    color: #ff7c62;
+    padding: 40px;
+    margin: 0 0 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+.contact-wrap h1 small {
+    font-size: 18px;
+    display: block;
+    text-transform: none;
+    font-weight: 300;
+    margin-top: 10px;
+    color: #ff7c62;
+}
+
+.citation{
+    background: url(https://i.pinimg.com/originals/4e/c4/11/4ec41137baca3b28990356e521809484.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.backdropBlur{
+    font-size: 1.8em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px) contrast(40%);
+    padding: 10%;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.backdropBlur:hover{
+  transition: all 0.5s;
+    background-color: #333;
+}
+
+/* -------------------- CTA -------------------- */
+
+#ctaExpertises button{
+    padding: 5px 20px;
+    border: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: #39CF76;
+    color: white;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#ctaExpertises button:hover{
+    transform: scale(0.9);
+}
+
+
+#ctaContact button{
+    padding: 5px 20px;
+    border: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: #39CF76;
+    color: white;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#ctaContact button:hover{
+    transform: scale(0.9);
+}
+
+
+button {
+    margin-top: 20px;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+
+@media (min-width:800px) {
+    .mainContact{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logosPartners {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-column-gap: 10%;
+        grid-row-gap: 20%;
+        padding: 5%;
+    }
+    
+    .mainPresentation{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .mainImgContainer{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .mainImgContainer img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+
+    #photoTeam{
+        padding: 10%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    #partners{
+        padding: 5%;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-wrap {
+        margin: auto;
+    }
+}
+  
+@media (max-width: 868px) {
+    .contact-form {
+        width: 100%;
+        padding: 40px;
+    }
+}
+  
+@media (max-width: 568px) {
+    .contact-form {
+        padding: 10px;
+    }
 }
 
 /*
